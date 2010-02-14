@@ -1,0 +1,13 @@
+{% if host_list %}
+{% for host in host_list %}
+# {{ host.hostname}} 
+{% for ip in host.ipendpoint_set.all %}
+{{ ip.ipaddr }} {{ host.hostname }}
+{% for alias in host.alias_set.all %}
+{{ alias.alias }}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% else %}
+# No hosts are available.
+{% endif %}

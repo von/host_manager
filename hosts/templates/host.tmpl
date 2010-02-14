@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ host.hostname }}{% endblock %}
+
+
+{% block content %}
+{% if host %}
+  <h1>{{ host.hostname }}</h1>
+{% else %}
+  <p>No host defined.</p>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,13 @@
+
+To install:
+
+* Add to site/settings.py:
+
+INSTALLED_APPS = (
+	       ...
+	       'site.hosts',
+)
+
+* Add to site/urls.py:
+
+    (r'^hosts/', include('host_manager.hosts.urls')),
